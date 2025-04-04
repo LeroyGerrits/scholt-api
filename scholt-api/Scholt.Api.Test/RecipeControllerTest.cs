@@ -22,7 +22,7 @@ namespace Scholt.Api.Test
         [Fact]
         public async Task Get_endpoint_returns_data_and_status_code_200()
         {
-            ActionResult<IEnumerable<RecipeGetResponseDto>> result = await mockRecipeController.Get();
+            ActionResult<IEnumerable<RecipeGetResponseDto>> result = await mockRecipeController.Get(null);
             Assert.NotNull(result);
             Assert.Equal(GetStatusCode(result!), StatusCodes.Status200OK);
         }
